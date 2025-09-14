@@ -1,0 +1,129 @@
+/* style.css */
+:root {
+    --bg-color: #0a192f;    /* Dark navy blue background */
+    --text-color: #ccd6f6;  /* Light blueish text */
+    --accent-color: #2D5DDE; /* Bright blue for links and highlights */
+    --light-accent: #64ffda; /* A lighter green/blue for details (optional) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+#container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR STYLES */
+#sidebar {
+    width: 300px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 1rem;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sidebar nav ul {
+    list-style: none;
+}
+
+#sidebar nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+#sidebar nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+#sidebar nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+
+
+
+/* MAIN CONTENT STYLES */
+#main-content {
+    flex: 1;
+    margin-left: 300px; /* Must match the sidebar width */
+    padding: 6rem 4rem;
+}
+
+section {
+    margin-bottom: 8rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(45, 93, 222, 0.1);
+}
+
+.skills-list, .tech-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.skills-list li, .tech-list li {
+    background-color: rgba(45, 93, 222, 0.1);
+    color: var(--accent-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.project {
+    margin-bottom: 4rem;
+}
+
+/* Animations */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
