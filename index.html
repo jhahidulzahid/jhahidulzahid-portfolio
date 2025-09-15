@@ -3,101 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhahidul Zahid - Backend Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- We will add fonts and icons here later -->
-
-    <!-- Add to your <head> section -->
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Then, update your body font in CSS -->
-
+    <title>Jhahidul Zahid - Laravel Developer</title>
+     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
 </head>
 <body>
-    <!-- The entire page content will go inside this container -->
     <div id="container">
-        
-        <!-- SIDEBAR WILL GO HERE -->
-         <!-- SIDEBAR -->
+        <!-- Fixed Left Sidebar -->
         <aside id="sidebar">
             <div class="inner">
-                <nav>
+                <h1><a href="#">Jhahidul Zahid</a></h1>
+                <h2>Backend Developer</h2>
+                <p>I build scalable, secure backend systems for the web.</p>
+                
+                <nav aria-label="Main navigation">
                     <ul>
-                        <li><a href="#intro">Intro</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#about" class="nav-link"><span class="indicator"></span><span class="text">About</span></a></li>
+                        <li><a href="#experience" class="nav-link"><span class="indicator"></span><span class="text">Experience</span></a></li>
+                        <li><a href="#projects" class="nav-link"><span class="indicator"></span><span class="text">Projects</span></a></li>
+                        <li><a href="#contact" class="nav-link"><span class="indicator"></span><span class="text">Contact</span></a></li>
                     </ul>
                 </nav>
+
+                <ul class="social-links">
+                    <li><a href="https://github.com/jhahidulzahid" aria-label="GitHub" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/jhahiduzahid/" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="https://facebook.com/jahiduljahid.776446" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://wa.me/+8801731867308" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
             </div>
         </aside>
-        
-        <!-- MAIN CONTENT WILL GO HERE -->
-        <!-- MAIN CONTENT -->
-<main id="main-content">
-    
-    <section id="intro">
-        <h1>Hi, my name is <span class="highlight">Jhahidul Islam</span></h1>
-        <h2>I build backend systems with Laravel.</h2>
-        <p>I'm a developer specializing in building and maintaining robust, scalable PHP applications using the Laravel framework.</p>
-        <a href="#projects" class="button">View my work</a>
-    </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="content">
-            <p>Here is where you write a short bio. Talk about your passion for backend development, your experience with Laravel, MySQL, and other technologies. Mention your drive to build efficient and scalable systems.</p>
-            <p>Here is a list of technologies I work with:</p>
-            <ul class="skills-list">
-                <li>Laravel</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Redis</li>
-                <li>Livewire</li>
-                <li>Git</li>
-                <li>Docker</li>
-            </ul>
-        </div>
-    </section>
+        <!-- Scrollable Main Content -->
+        <main id="main-content">
+            <section id="about" class="section">
+                <div class="section-content">
+                    <h2>About Me</h2>
+                    <p>Software Engineer (Backend) with 1.6+ years of experience in building scalable SaaS platforms, developing RESTful APIs, and integrating AI. Proficient in PHP, Laravel, and MySQL, with practical experience incorporating AI services such as ChatGPT, Perplexity, and DeepSeek into real-world applications.</p>
+                    <p>Skilled in enhancing backend performance, implementing secure role-based access control, and streamlining workflows through API-driven and AI-assisted architectures.</p>
+                    <p>Here is a list of technologies I work with:</p>
+                    <ul class="tech-list">
+                        <li>Laravel</li><li>PHP</li><li>MySQL</li><li>REST APIs</li><li>JavaScript</li><li>Git</li><li>Redis</li><li>CodeIgniter</li><li>OOP</li><li>MVC</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section id="projects">
-        <h2>Projects I've Built</h2>
-        
-        <div class="project">
-            <h3>Mail Professors</h3>
-            <p>A Laravel application for a coaching center to manage student inquiries and send personalized bulk emails with attachments, replacing a manual process.</p>
-            <ul class="tech-list">
-                <li>Laravel</li>
-                <li>Livewire</li>
-                <li>MySQL</li>
-                <li>Redis Queues</li>
-            </ul>
-            <div class="links">
-                <a href="#" class="button">Live Demo</a>
-                <a href="#" class="button">GitHub</a>
-            </div>
-        </div>
+            <section id="experience" class="section">
+                <div class="section-content">
+                    <h2>Experience</h2>
+                    <ol class="experience-list">
+                        <li class="job">
+                            <div class="job-header">
+                                <span class="year">06/2025 - Present</span>
+                                <h3>Software Engineer – Laravel & API Developer · <span class="text-link">The Tork Inc</span></h3>
+                            </div>
+                            <p>Building innovative SaaS applications</p>
+                            <ul>
+                                <li>Boosted application performance by 17% by architecting and optimizing RESTful APIs and modular SaaS components using Laravel</li>
+                                <li>Integrated third-party APIs (Google Calendar, Google Sheets, Calendly) and AI services (Perplexity, ChatGPT, DeepSeek)</li>
+                                <li>Designed and implemented robust role-based access control and credit-based billing infrastructure</li>
+                                <li>Led a university-scale data reconciliation project, processing nearly 1 million mismatched records with over 77% accuracy</li>
+                            </ul>
+                            <ul class="job-tech">
+                                <li>Laravel</li><li>PHP</li><li>MySQL</li><li>REST APIs</li><li>AI Integration</li>
+                            </ul>
+                        </li>
+                        
+                        <li class="job">
+                            <div class="job-header">
+                                <span class="year">01/2024 - 06/2025</span>
+                                <h3>Junior Laravel Developer · <span class="text-link">The Tork Inc</span></h3>
+                            </div>
+                            <p>Built scalable CMS and LMS modules</p>
+                            <ul>
+                                <li>Contributed to web application features including user authentication, dashboard, and notifications</li>
+                                <li>Engineered a real-time credit monitoring dashboard using Laravel</li>
+                                <li>Collaborated with frontend developers and QA engineers</li>
+                            </ul>
+                            <ul class="job-tech">
+                                <li>Laravel</li><li>MySQL</li><li>JavaScript</li><li>Bootstrap</li>
+                            </ul>
+                        </li>
+                        
+                        <li class="job">
+                            <div class="job-header">
+                                <span class="year">09/2023 - 12/2023</span>
+                                <h3>Laravel Developer Intern · <span class="text-link">The Tork Inc</span></h3>
+                            </div>
+                            <p>Developed CRUD operations and RESTful APIs for web application</p>
+                            <ul>
+                                <li>Integrated MySQL database schemas with Laravel framework and Git version control</li>
+                                <li>Managed over 50 database tables and 15+ daily code commits</li>
+                            </ul>
+                            <ul class="job-tech">
+                                <li>Laravel</li><li>MySQL</li><li>Git</li><li>REST APIs</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
 
-        <!-- Add more project divs here -->
+            <section id="projects" class="section">
+                <div class="section-content">
+                    <h2>Projects</h2>
+                    <ul class="project-list">
+                        <li class="project">
+                            <h3><span class="text-link">SaaS Platform for University Professor Data</span></h3>
+                            <p>Developed a platform for managing global university professor data</p>
+                            <ul>
+                                <li>Implemented a credit-based usage model combined with smart API result caching</li>
+                                <li>Reduced redundant API requests and significantly enhanced overall system performance</li>
+                            </ul>
+                            <ul class="project-tech">
+                                <li>Laravel</li><li>MySQL</li><li>REST APIs</li><li>Caching</li>
+                            </ul>
+                        </li>
+                        
+                        <li class="project">
+                            <h3><span class="text-link">Learning Management System (LMS)</span></h3>
+                            <p>Learning Management System to facilitate education processes</p>
+                            <ul>
+                                <li>Developed a full-featured LMS using Laravel including student enrollment, quiz, assignment, and certificate modules</li>
+                                <li>Implemented role-based dashboards for admin, instructors, and students</li>
+                            </ul>
+                            <ul class="project-tech">
+                                <li>Laravel</li><li>MySQL</li><li>JavaScript</li><li>Bootstrap</li>
+                            </ul>
+                        </li>
+                        
+                        <li class="project">
+                            <h3><span class="text-link">Inventory Management Software</span></h3>
+                            <p>A system to help small businesses manage their inventories efficiently</p>
+                            <ul>
+                                <li>Designed and built an inventory management system for small businesses using Laravel and MySQL</li>
+                                <li>Features included stock tracking, supplier management, purchase & sales reporting</li>
+                            </ul>
+                            <ul class="project-tech">
+                                <li>Laravel</li><li>MySQL</li><li>JavaScript</li><li>Bootstrap</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    </section>
-
-    <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
-        <a href="mailto:your.email@gmail.com" class="button">Say Hello</a>
-    </section>
-
-</main>
+            <section id="contact" class="section">
+                <div class="section-content">
+                    <h2>Contact</h2>
+                    <p>I'm currently looking for new opportunities. My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                    
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:jhahidulzahid@gmail.com" class="text-link">jhahidulzahid@gmail.com</a></p>
+                        <p><i class="fas fa-phone"></i> Phone: <a href="tel:+8801731867308" class="text-link">+8801731867308</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Location: Dhaka, Bangladesh</p>
+                    </div>
+                    
+                    <a href="mailto:jhahidulzahid@gmail.com" class="button">Say Hello</a>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <script src="script.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>

@@ -1,129 +1,250 @@
-/* style.css */
-:root {
-    --bg-color: #0a192f;    /* Dark navy blue background */
-    --text-color: #ccd6f6;  /* Light blueish text */
-    --accent-color: #2D5DDE; /* Bright blue for links and highlights */
-    --light-accent: #64ffda; /* A lighter green/blue for details (optional) */
-}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        :root {
+            --bg-dark: #0a192f;
+            --text-light: #ccd6f6;
+            --text-muted: #8892b0;
+            --accent: #2D5DDE;
+            --accent-light: #64ffda;
+            --nav-width: 300px;
+        }
 
-body {
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-#container {
-    display: flex;
-    min-height: 100vh;
-}
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-muted);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-/* SIDEBAR STYLES */
-#sidebar {
-    width: 300px;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 1rem;
-    position: fixed;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+        /* CONTAINER & LAYOUT */
+        #container {
+            display: flex;
+            min-height: 100vh;
+        }
 
-#sidebar nav ul {
-    list-style: none;
-}
+        #sidebar {
+            width: var(--nav-width);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 1rem;
+            position: fixed;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-#sidebar nav ul li {
-    margin-bottom: 1.5rem;
-}
+        #main-content {
+            flex: 1;
+            margin-left: var(--nav-width);
+            padding: 0 4rem 4rem 4rem;
+        }
 
-#sidebar nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
+        /* TYPOGRAPHY */
+        h1, h2, h3 {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
 
-#sidebar nav ul li a:hover {
-    color: var(--accent-color);
-}
+        #sidebar h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        #sidebar h1 a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        #sidebar h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        #sidebar p {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
 
+        .section {
+            margin: 8rem 0;
+            scroll-margin-top: 2rem;
+        }
+        .section-content {
+            max-width: 800px;
+        }
 
+        /* SIDEBAR NAVIGATION */
+        #sidebar nav ul {
+            list-style: none;
+        }
+        #sidebar nav ul li {
+            margin-bottom: 1.2rem;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--text-light);
+        }
+        .indicator {
+            height: 1px;
+            width: 2rem;
+            background-color: var(--text-muted);
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover .indicator {
+            width: 4rem;
+            background-color: var(--accent);
+        }
+        .nav-link.active {
+            color: var(--accent);
+        }
+        .nav-link.active .indicator {
+            width: 4rem;
+            background-color: var(--accent);
+        }
 
+        /* SOCIAL LINKS */
+        .social-links {
+            list-style: none;
+            display: flex;
+            margin-top: 2rem;
+        }
+        .social-links li {
+            margin-right: 1rem;
+        }
+        .social-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--accent);
+        }
 
-/* MAIN CONTENT STYLES */
-#main-content {
-    flex: 1;
-    margin-left: 300px; /* Must match the sidebar width */
-    padding: 6rem 4rem;
-}
+        /* LINKS & BUTTONS */
+        .text-link {
+            color: var(--text-light);
+            text-decoration: none;
+            position: relative;
+        }
+        .text-link:hover {
+            color: var(--accent);
+        }
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.6rem;
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: rgba(45, 93, 222, 0.1);
+        }
 
-section {
-    margin-bottom: 8rem;
-}
+        /* TECH LISTS */
+        .tech-list, .job-tech, .project-tech {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            margin-top: 1rem;
+        }
+        .tech-list li, .job-tech li, .project-tech li {
+            background-color: rgba(45, 93, 222, 0.1);
+            color: var(--accent);
+            padding: 0.2rem 0.7rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
 
-h1, h2, h3 {
-    margin-bottom: 1.5rem;
-    color: var(--text-color);
-}
+        /* EXPERIENCE LIST */
+        .experience-list {
+            list-style: none;
+        }
+        .job {
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .job:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        .year {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .job-header {
+            margin-bottom: 1rem;
+        }
 
-.highlight {
-    color: var(--accent-color);
-}
+        /* PROJECT LIST */
+        .project-list {
+            list-style: none;
+        }
+        .project {
+            margin-bottom: 3rem;
+            position: relative;
+            padding: 1.5rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .project:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
 
-.button {
-    display: inline-block;
-    padding: 0.8rem 1.4rem;
-    background: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-    border-radius: 4px;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
+        /* CONTACT INFO */
+        .contact-info {
+            margin-top: 2rem;
+        }
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
 
-.button:hover {
-    background-color: rgba(45, 93, 222, 0.1);
-}
-
-.skills-list, .tech-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-top: 1rem;
-}
-
-.skills-list li, .tech-list li {
-    background-color: rgba(45, 93, 222, 0.1);
-    color: var(--accent-color);
-    padding: 0.3rem 0.7rem;
-    border-radius: 3px;
-    font-size: 0.9rem;
-}
-
-.project {
-    margin-bottom: 4rem;
-}
-
-/* Animations */
-.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            #container {
+                flex-direction: column;
+            }
+            
+            #sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+            }
+            
+            #main-content {
+                margin-left: 0;
+                padding: 2rem 1rem;
+            }
+            
+            .section {
+                margin: 4rem 0;
+            }
+        }
